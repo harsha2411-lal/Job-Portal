@@ -18,7 +18,7 @@ from django.urls import path
 from job import views
 
 urlpatterns = [
-    path('job/',views.job),
+    path('',views.job),
     path('signin/',views.signin,name='sign'),
     path('register/',views.register,name='register'),
 ]
