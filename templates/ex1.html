@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>job portral</title>
+        <link rel="stylesheet" href="{% static 'ex1.css' %}">
+    </head>
+    <body>
+        <form method="POST">
+            {% csrf_token %}
+        <header class="navbar">
+            <nav>
+            <img src="{% static 'images/first.logo.png' %}" alt="logo" style="width: 50px;height: 40px;">
+                <a href="">Home</a>
+                <a href="">Jobs</a>
+                <a href="">Companies</a>
+                <a href="">Career Advice</a>
+            </nav>
+            <div class="auth">
+                <button class="signin" formaction="{% url 'sign'%}">sign in</button>
+                <button class="signin" formaction="{% url 'register'%}">Register</button>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+            <h1>Find your Dream Job Today</h1>
+            <h3>Career connect helps you disciver opportunities with top companies worldwide</h3>
+            <div class="search-box">
+            <input type="text" placeholder="job title,keywords">
+            <input type="text" placeholder="location">
+            <button>Search</button>
+            </div>
+            </div>
+            <img src="{% static 'images/group.png'%}" alt="team image" class="hero-image">
+            </section>
+            <section class="trusted">
+                <h1>Trusted by Leading Compinies</h1>
+                <div class="company-logos">
+                    <img src="{% static 'images/company1.png'%}" alt="logo">
+                    <img src="{% static 'images/company2.png'%}" alt="logo">
+                    <img src="{% static 'images/company3.png'%}" alt="logo">
+                    <img src="{% static 'images/company4.png'%}" alt="logo">
+                    <img src="{% static 'images/company5.png'%}" alt="logo">
+                </div>
+            </section>
+        </fieldset>
+        <section class="latest">
+            <div class="latest-job">
+                <h2>Latest Job Openings</h2>
+                <a href="" id="a">View all jobs-></a>
+            </div>
+            <div class="side">
+                <fieldset class="first">
+                    <div class="new">
+                        <img src="{% static 'images/joblogo1.png'%}" alt="logo">
+                        <button>New</button>
+                    </div>
+                    <div class="senior">
+                        <h3>Senior Frontend Developer</h3>
+                        <p>TechSphere Inc. San Francisco,CA. Full-<br>time</p>
+                    </div>
+                    <div class="senior1">
+                        <button>React</button>
+                        <button>TypeScript</button>
+                        <button>UL/UX</button>
+                    </div>
+                    <div class="senior2">
+                        <p>$120K-$150K</p>
+                        <a href="" id="a">View Details</a>
+                    </div>
+                </fieldset>
+                <fieldset class="second">
+                    <div class="remote">
+                        <img src="{% static 'images/joblogo2.png'%}" alt="logo">
+                        <button>Remote</button>
+                    </div>
+                    <div class="remote1">
+                        <h3>Financial Analyst</h3>
+                        <p>Finova Group. New York,NY. Full-Time</p>
+                    </div>
+                    <div class="remote2">
+                        <button>Accounting</button>
+                        <button>Excel</button>
+                        <button>Financial Modeling</button>
+                    </div>
+                    <div class="remote3" >
+                        <p>$95K-$120K</p>
+                        <a href="" id="a">View Details</a>
+                    </div>
+                </fieldset>
+                <fieldset class="third">
+                    <div class="register">
+                        <img src="{% static 'images/joblogo3.png'%}" alt="logo">
+                        <button>Urgent</button>
+                    </div>
+                    <div class="register1">
+                        <h3>Registered Nurse</h3>
+                        <p>HealthPlus. Chicago,IL. Part-Time</p>
+                    </div>
+                    <div class="register2">
+                        <button>Patient Care</button>
+                        <button>BLS Certified</button>
+                        <button>Emergency</button>
+                    </div>
+                    <div class="register3">
+                        <p>$35-$45/hr</p>
+                        <a href="" id="a">View Details</a>
+                    </div>
+                </fieldset>
+            </div>
+        </section> 
+        <div class="container">
+            <h2>how Career Connect Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <img src="{% static 'images/career1.png'%}" alt="logo">
+                    <h3>create your profile</h3>
+                    <p>Build Your Professional Profile</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <img src="{% static 'images/career2.png'%}" alt="logo">
+                    <h3>Find Matching Jobs</h3>
+                    <p>Our smart Algorithm works</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <img src="{% static 'images/career3.png'%}" alt="logo">
+                    <h3>Get Hired</h3>
+                    <p>Connect Directly With Employers</p>
+                </div>
+            </div>
+        </div>
+  <section class="success-stories">
+    <h2>Success Stories</h2>
+    <div class="testimonials">
+      <div class="card">
+        <img src="{% static 'images/success1.png'%}" alt="Sarah Johnson">
+        <h4>Sarah Johnson</h4>
+        <span>Senior Developer at TechSphere</span>
+        <p>"Career Connect helped me transition from a junior to senior role in just 2 years. The personalized job recommendations were spot-on!"</p>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="card">
+        <img src="{% static 'images/success2.png'%}" alt="Michael Chen">
+        <h4>Michael Chen</h4>
+        <span>Financial Analyst at Finova</span>
+        <p>"I landed my dream job within a month of using Career Connect. The platform made the application process so efficient."</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready for Your Next Career Move?</h2>
+    <p>Join thousands of professionals who found their perfect jobs through Career Connect.</p>
+    <div class="cta-buttons">
+      <button class="signup" formaction="{% url 'sign'%}">Sign Up Now</button>
+      <button class="learn">Learn More</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="col">
+      <div class="logo"><img src="{% static 'images/footer.png'%}"></div>
+      <p>Connecting talent with opportunity worldwide since 2018.</p>
+    </div>
+    <div class="col">
+      <h4>For Job Seekers</h4>
+      <ul>
+        <li>Browse Jobs</li>
+        <li>Create Profile</li>
+        <li>Career Resources</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>For Employers</h4>
+      <ul>
+        <li>Post a Job</li>
+        <li>Browse Candidates</li>
+        <li>Recruiting Solutions</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Company</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Contact</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+  </footer>
+</form>
+</body>
+</html>
