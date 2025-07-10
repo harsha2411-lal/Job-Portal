@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 whitenoise==6.6.0
+=======
+Django>=4.0,<5.0
+gunicorn==21.2.0
+whitenoise
+>>>>>>> 8ad1554e4b42f11a9fe8d6be56439c6849a98fa8
